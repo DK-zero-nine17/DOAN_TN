@@ -1,0 +1,44 @@
+.post-assignment {
+  display: flex;
+}
+
+.post-list {
+  flex: 1;
+}
+
+.post-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list li {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.post-list li.selected {
+  background-color: #f2f2f2;
+}
+
+.post-details {
+  flex: 1;
+  margin-left: 16px;
+  margin-right: 50px;
+}
+
+.assignment-form label {
+  display: block;
+  margin-top: 8px;
+}
+
+.assignment-form select,
+.assignment-form input,
+.assignment-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.assignment-form button {
+  margin-top: 8px;
+}

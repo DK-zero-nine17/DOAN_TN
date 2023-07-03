@@ -1,0 +1,38 @@
+.usermanagement {
+  width: auto;
+  border-collapse: collapse;
+  /* Các thuộc tính CSS khác */
+}
+
+.usermanagement th,
+.usermanagement td {
+  border: 1px solid;
+  padding: 8px;
+  text-align: left;
+  /* Các thuộc tính CSS khác */
+}
+
+.usermanagement th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  /* Các thuộc tính CSS khác */
+}
+
+.usermanagement td button {
+  margin: 5px;
+  /* Các thuộc tính CSS khác */
+}
+.user-no h2 {
+  margin: 10px;
+}
+.user-no label,
+select {
+  margin: 5px;
+  padding: 5px;
+}
+.user-no button {
+  padding: 5px;
+}
+.add-user {
+  margin-top: 5px;
+}

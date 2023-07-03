@@ -1,0 +1,39 @@
+.header-homepage {
+  padding-right: 200px;
+  display: flex;
+  align-items: center;
+  background: #f6f4f4;
+}
+.header-homepage h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-homepage img {
+  width: 200px;
+  height: 150px;
+}
+.header-homepage-container ul {
+  margin-top: 0px;
+  background: #d9d6d6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-homepage-container ul li {
+  padding: 10px;
+  margin-left: 10px;
+  list-style: none;
+}
+.header-homepage-container ul li a {
+  text-decoration: none;
+}
+
+.header-homepage-container ul li.homepage-logout {
+  margin-left: auto;
+}
+.header-homepage-container li:hover {
+  background: #9fddff7c;
+}

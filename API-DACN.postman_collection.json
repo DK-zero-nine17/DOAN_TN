@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "cab2f23a-3a05-412b-ab64-9b1a95fb200a",
+		"name": "API DACN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26709250"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "GetAllPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getAllPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HandleGetRecordInHiddenPostWithStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getRecordInHiddenPostWithStatus?idUser=1&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getRecordInHiddenPostWithStatus"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostLienQuan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getPostLienQuan?idCurrent=7&thietBi=máy tính&diachi=i",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getPostLienQuan"
+							],
+							"query": [
+								{
+									"key": "idCurrent",
+									"value": "7"
+								},
+								{
+									"key": "thietBi",
+									"value": "máy tính"
+								},
+								{
+									"key": "diachi",
+									"value": "i"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostWithStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getPostWithStatus?status=Chưa duyệt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getPostWithStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Chưa duyệt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostSearchBar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getPostSearchBar?keyword=tr",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getPostSearchBar"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "tr"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostSearchBar Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getAllPostOFSelected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllPostOFSelected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostNewPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post",
+									"value": "{\n    \"id\":0,\n    \"idUser\": 1,\n    \"tieudePost\": \"Con gà Khánh\",\n    \"nguoiguiPost\": \"ah\",\n    \"datePost\": \"2023-06-02 17:07:00.\",\n    \"noidungPost\": \"hìugjjbhh\",\n    \"thietBi\": \"máy chiếu\",\n    \"picturesPost\": \"/data/user/0/com.example.mini_do_an/cache/scaled_FB_IMG_1685613119015.jpg\",\n    \"trangThai\": \"Chưa duyệt\",\n    \"mdHuHong\": \"Nặng\",\n    \"mdCanThiet\": \"Bình Thường\",\n    \"diachi\": \"hjkbg\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "pictures",
+									"type": "file",
+									"src": [
+										"/D:/image_DoAn/preview (1).png",
+										"/D:/image_DoAn/preview.jpg"
+									]
+								},
+								{
+									"key": "pictures",
+									"value": "",
+									"type": "file",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/postNewPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postNewPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostNewPost Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUser\": 2,\r\n    \"idPost\": 7,\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postNewHiddenPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postNewHiddenPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":12,\r\n    \"idUser\": 1,\r\n    \"tieudePost\": \"Con gà Khánhhhh\",\r\n    \"nguoiguiPost\": \"ah\",\r\n    \"datePost\": \"2023-06-02 17:07:00.\",\r\n    \"noidungPost\": \"hìugjjbhh\",\r\n    \"thietBi\": \"máy chiếu\",\r\n    \"picturesPost\": \"/data/user/0/com.example.mini_do_an/cache/scaled_FB_IMG_1685613119015.jpg\",\r\n    \"trangThai\": \"Chưa duyệt\",\r\n    \"mdHuHong\": \"Nặng\",\r\n    \"mdCanThiet\": \"Bình Thường\",\r\n    \"diachi\": \"hjkbg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/putPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"putPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0,\r\n    \"idUser\": 1,\r\n    \"tieudePost\": \"Con gà Khánh\",\r\n    \"nguoiguiPost\": \"ah\",\r\n    \"datePost\": \"2023-06-02 17:07:00.\",\r\n    \"noidungPost\": \"hìugjjbhh\",\r\n    \"thietBi\": \"máy chiếu\",\r\n    \"picturesPost\": \"/data/user/0/com.example.mini_do_an/cache/scaled_FB_IMG_1685613119015.jpg\",\r\n    \"trangThai\": \"Chưa duyệt\",\r\n    \"mdHuHong\": \"Nặng\",\r\n    \"mdCanThiet\": \"Bình Thường\",\r\n    \"diachi\": \"hjkbg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/deletePost/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deletePost",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteHiddenPost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/getAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"getAllUser"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "idPost",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "GetAllComment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getAllComment?postId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllComment"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostNewComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCmt\": 0,\r\n    \"idPostCmt\": 2,\r\n    \"idUserCmt\": 2,\r\n    \"dateCmt\": \"2023-06-06 16:20:06.\",\r\n    \"contentCmt\": \"abc bánh bèo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postNewComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postNewComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutComment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCmt\": 8,\r\n    \"idPostCmt\": 2,\r\n    \"idUserCmt\": 2,\r\n    \"dateCmt\": \"\",\r\n    \"contentCmt\": \"abc bánh bèoooo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/putComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"putComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deleteComment/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteComment",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOneUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getOneUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getOneUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostNewUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"mssvUser\": \"Rơm\",\r\n    \"nameUser\": \"1234567\",\r\n    \"emailUser\": \"60@1234\",\r\n    \"lopUser\": \"CNTT\",\r\n    \"sdtUser\": \"033964\",\r\n    \"dateUser\": \"11-11-2011\",\r\n    \"diachiUser\": \"quận 9\",\r\n    \"avatarUser\": \"/data/user/0/com.example.mini_do_an/cache/scaled_FB_IMG_1685680826124.jpg\",\r\n    \"passwordUser\": \"6051071057\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postNewUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postNewUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"mssvUser\": \"Rơm\",\r\n    \"nameUser\": \"123459789\",\r\n    \"emailUser\": \"60@1234\",\r\n    \"lopUser\": \"CNTT\",\r\n    \"sdtUser\": \"033964\",\r\n    \"dateUser\": \"11-11-2011\",\r\n    \"diachiUser\": \"quận 9\",\r\n    \"avatarUser\": \"/data/user/0/com.example.mini_do_an/cache/scaled_FB_IMG_1685680826124.jpg\",\r\n    \"passwordUser\": \"6051071057\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/putUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"putUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/deleteUser/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteUser",
+								"6"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"mssvUser\": \"Rơm\",\r\n    \"nameUser\": \"123459789\",\r\n    \"emailUser\": \"60@1234\",\r\n    \"lopUser\": \"CNTT\",\r\n    \"passwordUser\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"62@1234\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Picture",
+			"item": [
+				{
+					"name": "getAllPictureWithIdPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getAllPicture?idPost=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllPicture"
+							],
+							"query": [
+								{
+									"key": "idPost",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
